@@ -27,15 +27,14 @@
                     Insertion Sort
                 </div>
                 <div class="pseudocode-procedures">
-                    <div id="pseudocode" title="InsertionSort(A):">
-                        for j = 2 to A.length
-                            i = j - 1
-                            while i &gt; 0 and A[i] &gt; A[i + 1]
-			        tmp = A[i + 1]
-                                A[i + 1]  = A[i]
-			        A[i] = key
-                                i = i - 1
-                            A[i + 1] = key
+                  <div id="pseudocode" title="InsertionSort(A):">
+		    for j = 2 to A.length
+		        i = j - 1
+		        while i &gt; 0 and A[i] &gt; A[i + 1]
+		            tmp = A[i + 1]
+		            A[i + 1]  = A[i]
+		            A[i] = tmp
+		            i = i - 1
                     </div>
                 </div>
                 <div id="controls"></div>
