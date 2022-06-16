@@ -26,15 +26,15 @@
                 <div class="panel-heading">
                     Insertion Sort
                 </div>
-                <div class="pseudocode-procedures" style="display: none;">
-                    <div id="pseudocode" title="InsertionSort(A):">
-                        for j = 2 to A.length
-                            key = A[j]
-                            i = j - 1
-                            while i &gt; 0 and A[i] &gt; key
-                                A[i + 1]  = A[i]
-                                i = i - 1
-                            A[i + 1] = key
+                <div class="pseudocode-procedures" style="display; none">
+                  <div id="pseudocode" title="InsertionSort(A):">
+		    for j = 2 to A.length
+		        i = j - 1
+		        while i &gt; 0 and A[i] &gt; A[i + 1]
+		            tmp = A[i + 1]
+		            A[i + 1]  = A[i]
+		            A[i] = tmp
+		            i = i - 1
                     </div>
                 </div>
                 <div id="controls"></div>
@@ -84,13 +84,13 @@ var myviz = new Vamonos.Visualizer({
     algorithm: function (_) {
         with (this) {
             for (j = 2; j < A.length; _(1), j++) {
-_(2);           key = A[j];
-_(3);           i = j - 1;
-                while (_(4), i > 0 && A[i] > key) {
+_(2);           i = j - 1;
+                while (_(3), i > 0 && A[i] > A[i + 1]) {
+_(4);		    tmp = A[i + 1];
 _(5);               A[i + 1] = A[i];
-_(6);               i = i - 1;
+_(6);		    A[i] = tmp;
+_(7);               i = i - 1;
                 }
-_(7);           A[i + 1] = key;
                 i = null;
             }
             j = null;
