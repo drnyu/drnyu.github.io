@@ -85,7 +85,7 @@ var myviz = new Vamonos.Visualizer({
         with (this) {
             for (j = 2; j < A.length; _(1), j++) {
 _(2);           i = j - 1;
-                while (_(3), i > 0 && A[i] > key) {
+                while (_(3), i > 0 && A[i] > A[i + 1]) {
 _(4);		    tmp = A[i + 1];
 _(5);               A[i + 1] = A[i];
 _(6);		    A[i] = tmp;
